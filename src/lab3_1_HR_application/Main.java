@@ -9,7 +9,7 @@ public class Main {
         Position senior = new Position("Senior", "Managing the Junior");
         Position junior  = new Position("Junior", "Routine work");
 
-        Employee hs  = new Employee("23", "Soghr ","W","jynhbgf",7656,5);
+        Employee hs  = new Employee("23", "Soghr ","W","jynhbgf",7656,50000);
 
         ceo.addEmployee(hs);
         senior.addEmployee(hs);

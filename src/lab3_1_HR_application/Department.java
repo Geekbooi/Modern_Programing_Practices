@@ -1,19 +1,18 @@
 package lab3_1_HR_application;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Department {
     private String name;
     private String location;
-    private ArrayList<Position>positions;
+    private List<Position> positions;
     private Company company;
     public Department(String name, String location) {
         this.name = name;
         this.location = location;
 
-
-            positions = new ArrayList<>();
-
+        positions = new ArrayList<>();
     }
     public void Print(){
         System.out.println("Department is "+ this.name);
@@ -33,3 +32,5 @@ public class Department {
         return total;
     }
 }
+
+
