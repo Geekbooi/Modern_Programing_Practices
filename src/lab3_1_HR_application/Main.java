@@ -12,7 +12,7 @@ public class Main {
         Employee hs  = new Employee("23", "Soghr ","W","jynhbgf",7656,50000);
 
         ceo.addEmployee(hs);
-        senior.addEmployee(hs);
+        //senior.addEmployee(hs);
 
         CSDepartment.addPosition(ceo);
         CSDepartment.addPosition(junior);

@@ -29,12 +29,14 @@ public class Company {
 //        }
 //        return salary;
 //    }
-    public void getSalary(){
+    public double getSalary(){
         double total=0;
         for(Department D : dept) {
            total+= D.getSalary();
         }
         System.out.println("Total is " + total);
+        return total;
+        //System.out.println("Total is " + total);
     }
 
 
