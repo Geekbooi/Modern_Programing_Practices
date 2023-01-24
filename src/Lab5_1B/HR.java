@@ -3,11 +3,12 @@ package Lab5_1B;
 import java.time.LocalDateTime;
 
 public class HR {
-    public static void main(String[] args) {
-        AEmployee commissioned = new Commissioned("ID1", 0.07, 4000);
-        AEmployee salaried = new Salaried("ID2", 4000);
-        AEmployee hourly = new Hourly("Id3", 50, 40);
+    static AEmployee commissioned = new Commissioned("ID1", 0.07, 4000);
+    static AEmployee salaried = new Salaried("ID2", 4000);
+    static AEmployee hourly = new Hourly("Id3", 50, 40);
 
+
+    public static void main(String[] args) {
 
         Order order1 = new Order(1, LocalDateTime.of(2022,2,1,0,0), 2);
         Order order2 = new Order(2, LocalDateTime.of(2022,2,1,0,0), 3);
