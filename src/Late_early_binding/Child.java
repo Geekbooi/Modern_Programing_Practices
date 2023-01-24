@@ -5,7 +5,7 @@ public class Child extends Parent{
         Parent P = new Child();
         P.print(); // Early Binding happen for static
     }
-    @Override
+
     public static void print(){
         System.out.println("Child Static");
     }
