@@ -15,7 +15,6 @@ public class HR {
         Order order3 = new Order(3, LocalDateTime.of(2022,2,1,0,0), 4);
         Order order4 = new Order(4, LocalDateTime.of(2022,2,1,0,0), 5);
         Order order5 = new Order(5, LocalDateTime.of(2022,2,1,0,0), 6);
-        //Order order6 = new Order(6, LocalDateTime.of(2022,2,1,0,0), 7);
 
         commissioned.addOrder(order1);
         commissioned.addOrder(order2);

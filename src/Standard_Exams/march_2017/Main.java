@@ -1,7 +1,6 @@
-package Standard_Exams;
+package Standard_Exams.march_2017;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -11,9 +10,12 @@ public class Main {
 
     //Uncomment when you are ready to test your code
 	public static void main(String[] args) {
+
+
 		Account[] someCheckingAccounts = new CheckingAccount[2];
 		someCheckingAccounts[0] = new CheckingAccount("231-471", 25.00, 100);
 		someCheckingAccounts[1] = new CheckingAccount("446-973", 25.00, 200);
+
 		Account[] someSavingsAccounts = new SavingsAccount[3];
 		someSavingsAccounts[0] = new SavingsAccount("44-8123", 0.03, 200);
 		someSavingsAccounts[1] = new SavingsAccount("21-9672", 0.03, 200);
