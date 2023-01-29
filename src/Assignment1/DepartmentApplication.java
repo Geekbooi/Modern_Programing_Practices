@@ -21,15 +21,6 @@ public class DepartmentApplication {
     {
         Department dept = new Department("ComputerScience");
 
-        //  The following commented out code will help you
-        //  create the objects that you need.
-
-
-        //  CHANGE the code below so that instead of addFaculty,
-        //  addStudent, and  addStaff, we have ONLY ONE method,
-        //  addPerson (this replaces the other three methods).
-
-
          // Create faculty objects
          Faculty frankMoore = new Faculty("Frank Moore","472-5921",43,10000);
          Faculty samHoward = new Faculty("Sam Howard","472-7222",55,9500);
@@ -51,9 +42,9 @@ public class DepartmentApplication {
         students.add(new Student("Mary Jones","472-7322",32,3.80));
         students.add(new Student("Lee Johnson","472-6009",19,3.65));
 
-        Stream.concat(students.stream().flatMap(stu->stu.getCourses().stream()).collect(Collectors.groupingBy(Course::getTitle,Collectors.toList()))
-                        .keySet().stream()
-        ,students.stream()).collect(Collectors.groupingBy(Student::getSalary,Collectors.counting()));
+//        Stream.concat(students.stream().flatMap(stu->stu.getCourses().stream()).collect(Collectors.groupingBy(Course::getTitle,Collectors.toList()))
+//                        .keySet().stream()
+//        ,students.stream()).collect(Collectors.groupingBy(Student::getSalary,Collectors.counting()));
 
 
         dept.addPerson (johnDoe);

@@ -51,9 +51,9 @@ public class DepartmentApplication {
         students.add(new Student("Mary Jones","472-7322",32,3.80));
         students.add(new Student("Lee Johnson","472-6009",19,3.65));
 
-        Stream.concat(students.stream().flatMap(stu->stu.getCourses().stream()).collect(Collectors.groupingBy(Course::getTitle,Collectors.toList()))
-                        .keySet().stream()
-        ,students.stream()).collect(Collectors.groupingBy(Student::getSalary,Collectors.counting()));
+//        Stream.concat(students.stream().flatMap(stu->stu.getCourses().stream()).collect(Collectors.groupingBy(Course::getTitle,Collectors.toList()))
+//                        .keySet().stream()
+//        ,students.stream()).collect(Collectors.groupingBy(Student::getSalary,Collectors.counting()));
 
 
         dept.addPerson (johnDoe);
