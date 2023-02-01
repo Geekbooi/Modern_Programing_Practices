@@ -6,17 +6,14 @@ import java.util.function.Function;
 
 public class Student extends Person{
     double GPA;
-
-    public List<Course> getCourses() {
-        return new ArrayList<>(Courses);
-    }
-
     final List<Course> Courses;
-
     public Student(String name, String phone, int age, double GPA) {
         super(name, phone, age);
         this.GPA = GPA;
         Courses = new ArrayList<>();
+    }
+    public List<Course> getCourses() {
+        return Courses;
     }
 
     @Override

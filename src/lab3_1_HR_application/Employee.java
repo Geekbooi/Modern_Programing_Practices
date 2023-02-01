@@ -1,5 +1,7 @@
 package lab3_1_HR_application;
 
+import java.util.Objects;
+
 public class Employee {
     private String employeeId;
     private String firstName;
@@ -29,5 +31,17 @@ public class Employee {
         return salary;
     }
 
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) return false;
+        Employee emp = null;
+        if (obj instanceof Employee) {
+            emp = (Employee) obj;
+        }
+        return (this.firstName.equals(emp.firstName) && this.middleInitial.equals(emp.middleInitial) &&
+                this.lastName.equals(emp.lastName) && this.salary == (emp.salary) &&
+                this.employeeId.equals(emp.employeeId) && this.birthDate == (emp.birthDate));
+    }
 
 }

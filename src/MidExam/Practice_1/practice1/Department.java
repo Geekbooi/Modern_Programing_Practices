@@ -10,34 +10,29 @@ import java.util.stream.Stream;
 
 public class Department {
     private String Name;
+    private final List<Person> Members;
+
+    public Department(String name) {
+        this.Name = name;
+        Members = new ArrayList<>();
+    }
 
     public String getName() {
         return Name;
-    }
-
-    public int[] getArr() {
-        return arr;
     }
 
     public List<Person> getMembers() {
         return Members;
     }
 
-    int[] arr = new int [] {1,2,3,4};
-    private final List<Person> Members;
-
-    public Department(String name){
-        this.Name = name;
-        Members = new ArrayList<>();
-    }
-
-    public void addPerson(Person p){
+    public void addPerson(Person p) {
         Members.add(p);
     }
-    public double getTotalSalary(){
+
+    public double getTotalSalary() {
         double sum = 0.0;
         //////Functional Way
-        sum = Members.stream().filter(m-> m instanceof Faculty || m instanceof Staff)
+        sum = Members.stream().filter(m -> m instanceof Faculty || m instanceof Staff)
                 .mapToDouble(Person::getSalary).reduce(0, Double::sum);
 
 
@@ -58,22 +53,22 @@ public class Department {
         return sum;
     }
 
-    public void showAllMembers(){
+    public void showAllMembers() {
         ////Functional Way
         Members.stream().forEach(Person::print);
 
-        ////Imperative Way
+        //Imperative Way
 //        for(Person p: Members){
 //            p.print();
 //        }
     }
 
-    public Person findFacultyByName(String name)
-    {
+    public Person findFacultyByName(String name) {
         ///Functional way
-        Optional<Person> optionalPerson = Members.stream().filter(m->m instanceof  Faculty && m.getName().equalsIgnoreCase(name)).findFirst();
+        Optional<Person> optionalPerson = Members.stream().filter(m -> m instanceof Faculty && m.getName().equalsIgnoreCase(name)).findFirst();
         return optionalPerson.orElse(null);//return optionalPerson.orElseGet(null);
-        ////Imperative way
+
+        //Imperative way
 //        for(Person p : Members)
 //        {
 //            if(p instanceof Faculty && p.getName().equalsIgnoreCase(name))
@@ -82,26 +77,24 @@ public class Department {
 //        return null;
     }
 
-    public void unitsPerFaculty(){
+    public void unitsPerFaculty() {
         ////Functional Programming
         ///Imperative Way
         System.out.println("-------- instanceof way -------");
-        for(Person f: Members)
-        {
-            if(f instanceof Faculty)
-            {
-                System.out.println("Name: "+ f.getName() + " totalUnits: "+f.getTotalUnits());
+        for (Person f : Members) {
+            if (f instanceof Faculty) {
+                {
+                    System.out.println("Name: " + f.getName() + " totalUnits: " + f.getTotalUnits());
+                }
             }
-        }
 
-        System.out.println("-------- getClass().getSimpleName() way -------");
-        for(Person f: Members)
-        {
-            if(f.getClass().getSimpleName().equals("Faculty"))
-            {
-                System.out.println("Name: "+ f.getName() + " totalUnits: "+f.getTotalUnits());
-            }
-        }
+//            System.out.println("-------- getClass().getSimpleName() way -------");
+//            for (Person f : Members) {
+//                if (f.getClass().getSimpleName().equals("Faculty")) {
+//                    System.out.println("Name: " + f.getName() + " totalUnits: " + f.getTotalUnits());
+//                }
+//            }
 
+        }
     }
 }

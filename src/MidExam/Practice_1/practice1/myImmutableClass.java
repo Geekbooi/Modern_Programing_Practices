@@ -12,7 +12,10 @@ public final class myImmutableClass {
     public void checkSize()
     {
         switch(size){
-            case LARGE :{ System.out.println("The size is Large");break;}
+            case LARGE : {
+                System.out.println("The size is Large");
+                break;
+            }
             case MEDIUM :{ System.out.println("The size is Medium");break;}
             case SMALL :{ System.out.println("The size is Small");break;}
             default :{ System.out.println("Wrong Size ");break;}

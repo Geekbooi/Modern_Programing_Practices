@@ -21,14 +21,9 @@ public class DepartmentApplication {
     {
         Department dept = new Department("ComputerScience");
 
-        //  The following commented out code will help you
-        //  create the objects that you need.
-
-
         //  CHANGE the code below so that instead of addFaculty,
         //  addStudent, and  addStaff, we have ONLY ONE method,
         //  addPerson (this replaces the other three methods).
-
 
          // Create faculty objects
          Faculty frankMoore = new Faculty("Frank Moore","472-5921",43,10000);
@@ -38,6 +33,8 @@ public class DepartmentApplication {
          dept.addPerson (frankMoore);
          dept.addPerson(samHoward);
          dept.addPerson(johnDoodle);
+
+
 
 
          // Create student objects
@@ -65,6 +62,7 @@ public class DepartmentApplication {
          Person frankGore = new Staff("Frank Gore","472-3321",33,4050);
          Person adamDavis = new Staff("Adam Davis","472-7552",50,5500);
          Person davidHeck = new Staff("David Heck","472-8890",29,3600);
+
          dept.addPerson (frankGore);
          dept.addPerson(adamDavis);
          dept.addPerson(davidHeck);
@@ -157,8 +155,8 @@ public class DepartmentApplication {
         System.out.print("Calling IPerson:myAbstract(): ");
         bara1.myAbstract();
         //////Enum
-        myImmutableClass ic = new myImmutableClass(myImmutableClass.SIZES.MEDIUM);
-        ic.checkSize();
+//        myImmutableClass ic = new myImmutableClass(myImmutableClass.SIZES.MEDIUM);
+//        ic.checkSize();
         while(true)
         {
             putText("Enter first letter of ");

@@ -12,7 +12,6 @@ public interface IPerson {
         default void myDefault(){
             System.out.println("From default method");
         }
-
         void myAbstract();
 
 }

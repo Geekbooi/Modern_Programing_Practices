@@ -9,10 +9,13 @@ public class Main {
         Position senior = new Position("Senior", "Managing the Junior");
         Position junior  = new Position("Junior", "Routine work");
 
-        Employee hs  = new Employee("23", "Soghr ","W","jynhbgf",7656,50000);
-
-        ceo.addEmployee(hs);
+        Employee emp1  = new Employee("23", "Soghr ","W","jynhbgf",7656,50000);
+        Employee emp2  = new Employee("23", "Soghr ","W","jynhbgf",7656,50000);
+        ceo.addEmployee(emp1);
         //senior.addEmployee(hs);
+
+        if(emp1 == emp2)
+            System.out.println("both employee objects are the same");
 
         CSDepartment.addPosition(ceo);
         CSDepartment.addPosition(junior);
